@@ -2,9 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json())
-app.listen(process.env.port ||8080,()=>{
-    console.log("my app is running!")
-})
+
 app.get("/",(req,res)=>{
     res.send("Hello there");
 })
@@ -90,3 +88,6 @@ const albumsData = [
     }
   ];
   
+  app.listen(process.env.PORT || 8080,()=>{
+    console.log("my app is running!")
+})
