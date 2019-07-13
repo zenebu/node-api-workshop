@@ -1,8 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-app.use(bodyParser.json())
 
+
+//npm install --save cors
+const cors = require("cors")
+app.use(cors())
+//git add ; git commit ; git push heroku master
+app.use(bodyParser.json())
 app.get("/",(req,res)=>{
     res.send("Hello there");
 })
